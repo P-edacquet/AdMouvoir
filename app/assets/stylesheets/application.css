@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.bg-color-primary{
+  background-color: #61d2dc;
+}
+
+.color-primary{
+  color: #61d2dc;
+}
