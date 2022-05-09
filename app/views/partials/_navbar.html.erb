@@ -1,4 +1,4 @@
-<nav class="navbar bg-gradient-to-r from-bg-primary to-bg-secondary p-0">
+<nav class="navbar bg-gradient-to-r from-bg-primary to-bg-secondary sticky top-0 z-10 p-0">
   <div class="flex-1">
     <div class="w-36 rounded-full">
       <%= link_to root_path do %>
@@ -13,17 +13,27 @@
       <label tabindex="0" class="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </label>
-      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-gradient-to-t from-bg-primary to-bg-secondary rounded-box w-52">
-        <li><a>Accueil</a></li>
-        <li><a>Qui suis-je ?</a></li>
-        <li><a>Coaching professionnel</a></li>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow adm-bg-primary rounded-box w-52">
+        <li><%= link_to "Accueil", root_path %></li>
+        <li><a href="#about">Qui suis-je ?</a></li>
+        <%
+=begin%>
+ <li><a>Coaching professionnel</a></li>
         <li><a>Conférences-Ateliers</a></li>
-        <li><a>Conseil & Formations</a></li>
-        <li><a>Galerie expériences</a></li>
-        <li><a>Partenaires</a></li>
-        <li><a>Ressources et actus</a></li>
-        <li><a>Contact</a></li>
-        <li><%= button_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
+        <li><a>Conseil & Formations</a></li> 
+<%
+=end%>
+        <li><a href="#experiences">Galerie expériences</a></li>
+        <%
+=begin%>
+ <li><a>Partenaires</a></li> 
+<%
+=end%>
+        <li><a href="#ressources">Ressources et actus</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <% if user_signed_in? %>
+          <li><%= button_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
+        <% end %>
       </ul>
     </div>
   </div>
