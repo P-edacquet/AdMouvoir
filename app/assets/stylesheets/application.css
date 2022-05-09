@@ -52,7 +52,7 @@
   --tw-gradient-stops: var(--tw-gradient-from), #bfdbfe, var(--tw-gradient-to, rgb(191 219 254 / 0));
 }
 
-.to-bg-quaternary{
+.to-bg-tertiary{
   --tw-gradient-to: #9d2b2a;
 }
 
