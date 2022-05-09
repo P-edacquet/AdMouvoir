@@ -14,21 +14,48 @@
  *= require_self
  */
 
-.bg-color-primary{
-  background-color: #61d2dc;
+.adm-bg-primary{
+  background-color: #2ad0ce;
 }
 
-.bg-color-secondary{
-  background-color: #276c7f;
+.adm-bg-secondary{
+  background-color: #155874;
 }
 
-.color-primary{
+.adm-bg-tertiary{
+  background-color: #edfffd;
+}
+
+
+.adm-text-primary{
   color: #61d2dc;
 }
 
-.color-secondary{
+.adm-text-secondary{
   color: #276c7f;
 }
+
+.adm-text-tertiary{
+  color: #edfffd;
+}
+
+.adm-text-quaternary{
+  color:#9d2b2a;
+}
+
+.from-bg-secondary{
+  --tw-gradient-from: #155874;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(241 245 249 / 0));
+}
+
+.via-bg-tertiary{
+  --tw-gradient-stops: var(--tw-gradient-from), #bfdbfe, var(--tw-gradient-to, rgb(191 219 254 / 0));
+}
+
+.to-bg-quaternary{
+  --tw-gradient-to: #9d2b2a;
+}
+
 
 footer p, footer a{
   color: white;
