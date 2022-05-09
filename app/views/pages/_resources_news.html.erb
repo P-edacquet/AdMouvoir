@@ -2,9 +2,16 @@
   Ressources et Actus
 </h2>
 
-<div>
+<div class="flex flex-col lg:flex-row flex-wrap gap-4 justify-center px-32">
   <% @posts.each do |post| %>
-    <%= post.title %>
-    <%= post.content %>
+    <div class="card w-96 bg-base-100 shadow-xl card-bordered max-w-fit">
+      <div class="card-body">
+        <h2 class="card-title text-black"><%= post.title %></h2>
+        <p class="text-black"><%= post.content %></p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">Lire</button>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
