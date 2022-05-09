@@ -43,6 +43,11 @@
   color:#fe5956;
 }
 
+.from-bg-primary{
+  --tw-gradient-from: #2ad0ce;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(241 245 249 / 0));
+}
+
 .from-bg-secondary{
   --tw-gradient-from: #155874;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(241 245 249 / 0));
@@ -52,7 +57,11 @@
   --tw-gradient-stops: var(--tw-gradient-from), #bfdbfe, var(--tw-gradient-to, rgb(191 219 254 / 0));
 }
 
-.to-bg-tertiary{
+.to-bg-secondary{
+  --tw-gradient-to: #276c7f;
+}
+
+.to-bg-quaternary{
   --tw-gradient-to: #9d2b2a;
 }
 
