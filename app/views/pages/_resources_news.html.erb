@@ -5,7 +5,7 @@
 
   <div class="mb-12">
     <div class="flex flex-wrap gap-4 justify-center px-4">
-      <%= render partial: "posts_tile", collection: @posts, as: :post %>
+      <%= render partial: "post_card", collection: @posts, as: :post %>
     </div>
   </div>
   <%= link_to "Voir toutes les actualités", "actualites", class: "btn btn-accent btn-outline btn-lg text-center mx-auto" %>
