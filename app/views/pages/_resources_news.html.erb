@@ -1,16 +1,22 @@
-<div id="ressources" class="mb-12">
+<div class="flex flex-col mb-24">
   <h2 class="font-medium text-5xl text-center adm-text-primary mb-12">
     Ressources et Actus
   </h2>
 
-  <div class="flex flex-wrap gap-4 justify-center px-4 lg:px-32">
-    <% @posts.each do |post| %>
-      <div class="card card-compact md:card-normal w-96 adm-bg-tertiary shadow-xl card-bordered grow">
-        <div class="card-body">
-          <h2 class="card-title adm-text-quaternary break-all text-2xl"><%= post.title %></h2>
-          <p class="text-black break-words text-xl"><%= post.content %></p>
+  <div class="mb-12">
+    <div class="flex flex-wrap gap-4 justify-center px-4 lg:px-32">
+      <% @posts.each do |post| %>
+        <div class="card card-compact md:card-normal w-96 adm-bg-tertiary shadow-xl card-bordered grow">
+          <div class="card-body">
+            <h2 class="card-title adm-text-quaternary break-all text-2xl"><%= post.title %></h2>
+            <p class="text-black break-words text-xl"><%= post.content.truncate(100) %></p>
+            <div class="card-actions justify-end">
+              <%= link_to "Lire la suite", post, class: "btn btn-primary btn-sm" %>
+            </div>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
+  <%= link_to "Voir toutes les actualités", "actualites", class: "btn btn-primary btn-lg text-center mx-auto" %>
 </div>
