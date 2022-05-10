@@ -6,9 +6,9 @@
     <% @posts.each do |post| %>
       <div class="card card-compact md:card-normal w-96 adm-bg-tertiary shadow-xl card-bordered">
         <div class="card-body">
-          <h2 class="card-title adm-text-quaternary break-all text-2xl font-black"><%= post.title %></h2>
+          <h2 class="card-title adm-text-quaternary text-2xl font-black"><%= post.title %></h2>
           <p class="text-xl"><%= post.category %></p>
-          <p class="text-black break-words text-xl"><%= post.content.truncate(150) %></p>
+          <p class="text-black text-xl"><%= post.content.truncate(200) %></p>
           <div class="card-actions justify-end">
             <%= link_to "Lire la suite", post, class: "btn btn-accent btn-sm" %>
           </div>

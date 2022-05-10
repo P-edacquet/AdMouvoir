@@ -7,11 +7,11 @@
     <h1 class="text-6xl text-center py-16">
       <%= @post.title %>
     </h1>
-    <p class="text-xl"><%= @post.category %></p>
+    <p class="adm-text-quaternary text-xl mb-6"><%= @post.category %></p>
     <p class="text-xl"><%= @post.content %></p>
 
     <% if user_signed_in? %>
-      <%= link_to 'Edit this post', edit_post_path(@post), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= link_to 'Edit this post', edit_post_path(@post), class: "mt-24 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
       <div class="inline-block ml-2">
         <%= button_to 'Destroy this post', post_path(@post), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
       </div>
