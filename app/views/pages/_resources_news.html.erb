@@ -8,15 +8,16 @@
       <% @posts.each do |post| %>
         <div class="card card-compact md:card-normal w-96 adm-bg-tertiary shadow-xl card-bordered">
           <div class="card-body">
-            <h2 class="card-title adm-text-quaternary break-all text-2xl font-black"><%= post.title %></h2>
+            <h2 class="card-title adm-text-secondary break-all text-2xl font-black"><%= post.title %></h2>
+            <p class="adm-text-quaternary break-words text-xl"><%= post.category %></p>
             <p class="text-black break-words text-xl"><%= post.content.truncate(100) %></p>
             <div class="card-actions justify-end">
-              <%= link_to "Lire la suite", post, class: "btn btn-accent btn-sm" %>
+              <%= link_to "Lire la suite", post, class: "btn btn-accent btn-sm btn-outline" %>
             </div>
           </div>
         </div>
       <% end %>
     </div>
   </div>
-  <%= link_to "Voir toutes les actualités", "actualites", class: "btn btn-accent btn-lg text-center mx-auto" %>
+  <%= link_to "Voir toutes les actualités", "actualites", class: "btn btn-accent btn-outline btn-lg text-center mx-auto" %>
 </div>
