@@ -7,9 +7,7 @@
     <%= post.category %>
   </p>
 
-  <p class="my-5 text-xl">
-    <%= post.content %>
-  </p>
+  <%= simple_format post.content, class: "my-5 text-xl mb-24" %>
 
   <% if action_name != "show" %>
     <%= link_to "Show this post", post, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>

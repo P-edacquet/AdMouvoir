@@ -5,18 +5,7 @@
 
   <div class="mb-12">
     <div class="flex flex-wrap gap-4 justify-center px-4 lg:px-32">
-      <% @posts.each do |post| %>
-        <div class="card card-compact md:card-normal w-96 adm-bg-tertiary shadow-xl card-bordered">
-          <div class="card-body">
-            <h2 class="card-title adm-text-secondary text-2xl font-black"><%= post.title %></h2>
-            <p class="adm-text-quaternary text-xl"><%= post.category %></p>
-            <p class="text-black text-xl"><%= post.content.truncate(200) %></p>
-            <div class="card-actions justify-end">
-              <%= link_to "Lire la suite", post, class: "btn btn-accent btn-sm btn-outline" %>
-            </div>
-          </div>
-        </div>
-      <% end %>
+      <%= render partial: "posts_tile", collection: @posts, as: :post %>
     </div>
   </div>
   <%= link_to "Voir toutes les actualités", "actualites", class: "btn btn-accent btn-outline btn-lg text-center mx-auto" %>

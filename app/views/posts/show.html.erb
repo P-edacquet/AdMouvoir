@@ -8,7 +8,7 @@
       <%= @post.title %>
     </h1>
     <p class="adm-text-quaternary text-xl mb-6"><%= @post.category %></p>
-    <p class="text-xl"><%= @post.content %></p>
+    <p class="text-xl"><%= simple_format @post.content %></p>
 
     <% if user_signed_in? %>
       <%= link_to 'Edit this post', edit_post_path(@post), class: "mt-24 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>

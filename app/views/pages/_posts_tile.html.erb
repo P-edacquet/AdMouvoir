@@ -1,0 +1,10 @@
+<div class="card card-compact md:card-normal w-96 adm-bg-tertiary shadow-xl card-bordered">
+  <div class="card-body">
+    <h2 class="card-title adm-text-secondary text-2xl font-black"><%= post.title %></h2>
+    <p class="adm-text-quaternary text-xl"><%= post.category %></p>
+    <%= simple_format post.content.truncate(200), class: "text-black text-xl" %>
+    <div class="card-actions justify-end">
+      <%= link_to "Lire la suite", post, class: "btn btn-accent btn-sm btn-outline" %>
+    </div>
+  </div>
+</div>
