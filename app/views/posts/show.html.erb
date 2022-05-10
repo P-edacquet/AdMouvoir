@@ -1,14 +1,14 @@
 <div class="mx-auto md:w-2/3 w-full flex">
   <div class="mx-auto">
     <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      < class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
     <h1 class="text-6xl text-center py-16">
       <%= @post.title %>
     </h1>
-    <p class="adm-text-quaternary text-xl mb-6"><%= @post.category %></p>
-    <p class="text-xl"><%= simple_format @post.content %></p>
+    <p class="adm-text-quaternary text-2xl mb-6"><%= @post.category %></p>
+    <%= simple_format @post.content, class: "text-2xl" %>
 
     <% if user_signed_in? %>
       <%= link_to 'Edit this post', edit_post_path(@post), class: "mt-24 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>

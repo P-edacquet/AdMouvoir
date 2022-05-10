@@ -13,25 +13,25 @@
       <label tabindex="0" class="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </label>
-      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow adm-bg-primary rounded-box w-52">
-        <li><%= link_to "Accueil", root_path, class: "btn-accent" %></li>
-        <li><a href="#about" class="btn-accent">Qui suis-je ?</a></li>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow adm-bg-secondary rounded-box w-52">
+        <li><%= link_to "Accueil", root_path, class: "btn-accent btn-outline text-white" %></li>
+        <li><a href="#about" class="btn-accent btn-outline text-white">Qui suis-je ?</a></li>
         <%
 =begin%>
  <li><a>Coaching professionnel</a></li>
-        <li><a class="btn-accent">Conférences-Ateliers</a></li>
-        <li><a class="btn-accent">Conseil & Formations</a></li> 
+        <li><a class="btn-accent btn-outline text-white">Conférences-Ateliers</a></li>
+        <li><a class="btn-accent btn-outline text-white">Conseil & Formations</a></li> 
 <%
 =end%>
-        <li><a href="#experiences" class="btn-accent">Galerie expériences</a></li>
+        <li><a href="#experiences" class="btn-accent btn-outline text-white">Galerie expériences</a></li>
         <%
 =begin%>
- <li><a class="btn-accent">Partenaires</a></li> 
+ <li><a class="btn-accent btn-outline text-white">Partenaires</a></li> 
 <%
 =end%>
-        <li><a href="#ressources" class="btn-accent">Ressources et actus</a></li>
-        <li><a href="/actualites" class="btn-accent">Actualités</a></li>
-        <li><a href="#contact" class="btn-accent">Contact</a></li>
+        <li><a href="#ressources" class="btn-accent btn-outline text-white">Ressources et actus</a></li>
+        <li><a href="/actualites" class="btn-accent btn-outline text-white">Actualités</a></li>
+        <li><a href="#contact" class="btn-accent btn-outline text-white">Contact</a></li>
         <% if user_signed_in? %>
           <li><%= button_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
         <% end %>
