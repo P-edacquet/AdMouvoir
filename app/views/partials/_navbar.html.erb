@@ -30,6 +30,7 @@
 <%
 =end%>
         <li><a href="#ressources">Ressources et actus</a></li>
+        <li><a href="/actualites">Actualités</a></li>
         <li><a href="#contact">Contact</a></li>
         <% if user_signed_in? %>
           <li><%= button_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
