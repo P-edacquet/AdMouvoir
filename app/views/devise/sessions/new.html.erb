@@ -1,0 +1,24 @@
+<div class="pt-10 lg:pt-28">
+  <div class="p-10 lg:p-20 mx-auto max-w-fit border rounded-md border-slate-400">
+    <h1 class="text-4xl text-center font-black mb-8">Connexion</h1>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "mb-4" %>
+      <br>
+      <%= f.label :password, label: "zoiefj" %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+
+      <% if devise_mapping.rememberable? %>
+        <label class="label cursor-pointer justify-start mt-4">
+          <%= f.check_box :remember_me, class: "checkbox", checked: true %>
+          <%= f.label :remember_me, class: "label-text text-lg ml-4" %>
+        </label>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Se connecter", class: "btn btn-accent mt-12 btn-block" %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
