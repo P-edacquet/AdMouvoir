@@ -15,7 +15,11 @@
   }
 
   .adm-tablinks{
-    @apply rounded-t-lg border-b-2 focus:font-black flex-1 p-6
+    @apply rounded-t-lg border-b-4 flex-1 p-6
+  }
+
+  .adm-tablinks.active{
+    @apply font-black
   }
 
   .adm-tab button{

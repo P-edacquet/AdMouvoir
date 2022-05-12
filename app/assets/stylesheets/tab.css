@@ -9,6 +9,6 @@
   to {opacity: 1;}
 }
 
-.adm-tablinks:focus, .adm-tablinks:hover{
+.adm-tablinks.active, .adm-tablinks:hover{
   border-bottom-color: #2ad0ce;
 }
