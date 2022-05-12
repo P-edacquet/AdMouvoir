@@ -3,7 +3,27 @@
 @tailwind utilities;
 
 @layer components {
+  h2{
+    @apply !text-5xl !font-medium text-center !mb-12
+  }
   h1, h2, h3, p {
     @apply text-white;
   }
+
+  strong{
+    @apply font-black
+  }
+
+  .adm-tablinks{
+    @apply rounded-t-lg border-b-2 focus:font-black flex-1 p-6
+  }
+
+  .adm-tab button{
+    @apply cursor-pointer transition duration-300
+  }
+
+  .adm-tabcontent {
+    @apply hidden
+  }
+
 }
