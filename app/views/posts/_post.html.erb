@@ -7,6 +7,12 @@
     <%= post.category %>
   </p>
 
+  <% if post.document %>
+    <p class="my-5">
+      Document(s) inclu(s)
+    </p>
+  <% end %>
+
   <%= simple_format post.content, class: "my-5 text-xl mb-24" %>
 
   <% if action_name != "show" %>

@@ -22,6 +22,13 @@
   </div>
 
   <div class="my-5">
+    <label class="label cursor-pointer justify-start mt-4">
+      <%= form.check_box :document, class: "checkbox" %>
+      <%= form.label :document, class: "label-text text-2xl ml-4" %>
+    </label>
+  </div>
+
+  <div class="my-5">
     <%= form.label :content, class: "text-2xl font-medium" %>
     <%= form.text_area :content, rows: 10, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
