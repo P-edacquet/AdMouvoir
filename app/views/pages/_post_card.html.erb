@@ -1,6 +1,6 @@
 <div class="card md:card-normal w-96 adm-bg-tertiary shadow-xl glass">
   <div class="card-body">
-    <h2 class="card-title text-white text-2xl font-black"><%= post.title %></h2>
+    <h2 class="card-title text-white !text-2xl font-black !mb-0"><%= post.title %></h2>
     <p class="adm-text-quaternary text-xl"><%= post.category %></p>
     <%= simple_format post.content.truncate(200), class: "text-black text-xl" %>
     <div class="card-actions justify-end">
