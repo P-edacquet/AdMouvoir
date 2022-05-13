@@ -30,4 +30,8 @@
     @apply hidden
   }
 
+  .collapse{
+    @apply !border !border-slate-300 !bg-gradient-to-r !from-cyan-400 !to-sky-400 !text-white !my-2
+  }
+
 }

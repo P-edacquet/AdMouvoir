@@ -1,3 +1,7 @@
+<p>
+  Veuillez rentrer votre email pour que nous puissions garder contact
+</p>
+
 <%= form_with(url: inscription_create_path, method: :post, data: { turbo_confirm: 'Vérifiez bien votre adresse e-mail, puis cliquez sur ok' }) do |form| %>
 
   <%= form.hidden_field :post_id, value: params[:post_id] %>
