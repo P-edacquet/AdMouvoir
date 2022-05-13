@@ -1,3 +1,6 @@
-<p class="text-xl px-4 mb-12">
-  <%= reference.name %>
-</p>
+<div class="flex flex-col">
+  <%= image_tag reference.url, width: "100px" unless reference.url.blank? %>
+  <p class="text-xl px-4 mb-12">
+    <%= reference.name %>
+  </p>
+</div>
