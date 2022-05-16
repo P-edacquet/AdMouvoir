@@ -57,6 +57,11 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "faker"
+
+  # Preview mail in the browser instead of sending.
+  gem 'letter_opener'
+  # A web interface for browsing Ruby on Rails sent emails
+  gem 'letter_opener_web'
 end
 
 group :development do

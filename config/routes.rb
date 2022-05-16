@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :references
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
   devise_for :users
+
+  resources :references
   resources :posts
   get 'pages/home'
   get 'actualites', to: 'pages#posts', as: :actualites
