@@ -91,7 +91,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  ActionMailer::Base.smtp_settings = {
+  # MailGun configuration
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
     :address        => ENV['MAILGUN_SMTP_SERVER'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
@@ -99,7 +101,6 @@ Rails.application.configure do
     :domain         => 'admouvoir.herokuapp.com',
     :authentication => :plain,
   }
-  ActionMailer::Base.delivery_method = :smtp
 
   config.action_mailer.default_url_options = { host: 'admouvoir.herokuapp.com', protocol: 'https' }
 end
