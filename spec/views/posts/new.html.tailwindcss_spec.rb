@@ -4,7 +4,9 @@ RSpec.describe "posts/new", type: :view do
   before(:each) do
     assign(:post, Post.new(
       title: "MyString",
-      content: "MyString"
+      content: "MyString",
+      category: "MyString",
+      document: true
     ))
   end
 
@@ -12,10 +14,12 @@ RSpec.describe "posts/new", type: :view do
     render
 
     assert_select "form[action=?][method=?]", posts_path, "post" do
-
       assert_select "input[name=?]", "post[title]"
-
-      assert_select "input[name=?]", "post[content]"
+      assert_select "textarea[name=?]", "post[content]"
+      assert_select "input[name=?]", "post[category]"
+      assert_select "input[name=?]", "post[document]"
     end
+    expect(rendered).to match(/Create Post/)
+    expect(rendered).to match(/Retour aux posts/)
   end
 end

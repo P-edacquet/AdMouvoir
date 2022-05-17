@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe "references/new", type: :view do
   before(:each) do
     assign(:reference, Reference.new(
-      name: "MyString"
+      name: "MyString",
+      url: "MyString"
     ))
   end
 
@@ -13,6 +14,9 @@ RSpec.describe "references/new", type: :view do
     assert_select "form[action=?][method=?]", references_path, "post" do
 
       assert_select "input[name=?]", "reference[name]"
+      assert_select "input[name=?]", "reference[url]"
     end
+    expect(rendered).to match(/Create Reference/)
+    expect(rendered).to match(/Retour aux références/)
   end
 end
