@@ -18,12 +18,17 @@ RSpec.describe "/posts", type: :request do
   # Post. As you add validations to Post, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { title:"Mon super post", content: "Mon super contenu", category: "Super", document: true}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { document: true}
   }
+
+  before(:each) do
+    @user = User.create(email: "user@example.com", password: "password")
+    login_as @user
+  end
 
   describe "GET /index" do
     it "renders a successful response" do
@@ -79,40 +84,41 @@ RSpec.describe "/posts", type: :request do
 
       it "renders a successful response (i.e. to display the 'new' template)" do
         post posts_url, params: { post: invalid_attributes }
-        expect(response).to be_successful
+        expect(response.status).to be 422
       end
     end
   end
 
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
+  # TODO
+  # describe "PATCH /update" do
+  #   context "with valid parameters" do
+  #     let(:new_attributes) {
+  #       { title: "Mon nouveau super post", content: "Mon nouveau super contenu", category: "Super++", document: true}
+  #     }
 
-      it "updates the requested post" do
-        post = Post.create! valid_attributes
-        patch post_url(post), params: { post: new_attributes }
-        post.reload
-        skip("Add assertions for updated state")
-      end
+  #     it "updates the requested post" do
+  #       post = Post.create! valid_attributes
+  #       patch post_url(post), params: { post: new_attributes }
+  #       post.reload
+  #       skip("Add assertions for updated state")
+  #     end
 
-      it "redirects to the post" do
-        post = Post.create! valid_attributes
-        patch post_url(post), params: { post: new_attributes }
-        post.reload
-        expect(response).to redirect_to(post_url(post))
-      end
-    end
+      # it "redirects to the post" do
+      #   post = Post.create! valid_attributes
+      #   patch post_url(post), params: { post: new_attributes }
+      #   post.reload
+      #   expect(response).to redirect_to(post_url(post))
+      # end
+  #   end
 
-    context "with invalid parameters" do
-      it "renders a successful response (i.e. to display the 'edit' template)" do
-        post = Post.create! valid_attributes
-        patch post_url(post), params: { post: invalid_attributes }
-        expect(response).to be_successful
-      end
-    end
-  end
+  #   context "with invalid parameters" do
+  #     it "renders a successful response (i.e. to display the 'edit' template)" do
+  #       post = Post.create! valid_attributes
+  #       patch post_url(post), params: { post: invalid_attributes }
+  #       expect(response).to be_successful
+  #     end
+  #   end
+  # end
 
   describe "DELETE /destroy" do
     it "destroys the requested post" do

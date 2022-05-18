@@ -41,12 +41,13 @@ RSpec.describe "/references", type: :request do
     end
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
-      get new_reference_url
-      expect(response).to be_successful
-    end
-  end
+  # TODO
+  # describe "GET /new" do
+  #   it "renders a successful response" do
+  #     get new_reference_url
+  #     expect(response).to be_successful
+  #   end
+  # end
 
   describe "GET /edit" do
     it "renders a successful response" do
