@@ -10,7 +10,7 @@
         <p class="adm-text-quaternary text-2xl mb-6"><%= @post.category %></p>
         <%= simple_format @post.content, class: "adm-text-tertiary text-2xl" %>
         <% if @post.document %>
-          <%=link_to "Télécharger", inscription_path(post_id: @post.id), class: "btn btn-accent" %>
+          <%=link_to "Télécharger", inscription_path(post_id: @post.id), class: "btn btn-outline text-white mt-6" %>
         <% end %>
       </div>
     </div>
