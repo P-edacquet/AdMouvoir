@@ -4,9 +4,9 @@
       <p class="py-2 px-3 bg-green-50 my-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
-    <div class="card md:card-normal adm-bg-tertiary shadow-xl glass mt-12">
+    <div class="card card-compact md:card-normal adm-bg-tertiary shadow-xl glass mt-12">
       <div class="card-body">
-        <h1 class="card-title adm-text-primary text-6xl text-center font-black break-word mt-8 mb-4"><%= @post.title %></h1>
+        <h1 class="card-title adm-text-primary text-3xl lg:text-6xl text-center font-black break-word mt-8 mb-4"><%= @post.title %></h1>
         <p class="text-2xl mb-6 badge badge-lg badge-outline"><%= @post.category %></p>
         <%= simple_format @post.content, class: "adm-text-tertiary text-2xl break-word" %>
         <% if @post.document %>

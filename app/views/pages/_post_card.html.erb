@@ -1,6 +1,6 @@
-<div class="card md:card-normal w-96 adm-bg-tertiary glass">
+<div class="card card-compact md:card-normal w-96 adm-bg-tertiary glass">
   <div class="card-body">
-    <h2 class="adm-text-primary !text-2xl font-black !mb-0 text-left break-word"><%= post.title %></h2>
+    <h2 class="adm-text-primary !text-3xl font-black !mb-0 text-left break-word"><%= post.title %></h2>
     <%= link_to actualites_path(category: post.category) do %>
       <p class="text-xl badge badge-lg badge-outline"><%= post.category %></p>
     <% end %>
