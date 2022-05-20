@@ -6,15 +6,15 @@
 
     <div class="card md:card-normal adm-bg-tertiary shadow-xl glass mt-12">
       <div class="card-body">
-        <h1 class="card-title adm-text-primary text-6xl text-center font-black mt-8 mb-4"><%= @post.title %></h1>
+        <h1 class="card-title adm-text-primary text-6xl text-center font-black break-all mt-8 mb-4"><%= @post.title %></h1>
         <p class="text-2xl mb-6 badge badge-lg badge-outline"><%= @post.category %></p>
-        <%= simple_format @post.content, class: "adm-text-tertiary text-2xl" %>
+        <%= simple_format @post.content, class: "adm-text-tertiary text-2xl break-all" %>
         <% if @post.document %>
           <%=link_to "Télécharger", inscription_path(post_id: @post.id), class: "btn btn-outline text-white mt-6" %>
         <% end %>
       </div>
     </div>
-    <%= link_to "Retour vers les ressources et actualités", root_path(anchor: "ressources"), class: "btn btn-outline btn-block text-center text-white mx-auto mt-12" %>
+    <%= link_to "Retour vers les ressources et actualités", root_path(anchor: "ressources"), class: "btn btn-outline btn-block text-center text-white mx-auto my-12" %>
     <% if user_signed_in? %>
       <%= link_to 'Éditer', edit_post_path(@post), class: "mt-24 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
       <div class="inline-block ml-2">
