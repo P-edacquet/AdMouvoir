@@ -2,7 +2,7 @@
   <div class="card-body">
     <h2 class="adm-text-primary !text-2xl font-black !mb-0 text-left"><%= post.title %></h2>
     <%= link_to actualites_path(category: post.category) do %>
-      <p class="adm-text-quaternary text-xl badge badge-lg badge-outline"><%= post.category %></p>
+      <p class="text-xl badge badge-lg badge-outline"><%= post.category %></p>
     <% end %>
     <%= simple_format post.content.truncate(200), class: "text-xl" %>
     <div class="card-actions justify-end">

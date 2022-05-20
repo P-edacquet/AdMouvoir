@@ -7,7 +7,7 @@
     <div class="card md:card-normal adm-bg-tertiary shadow-xl glass mt-12">
       <div class="card-body">
         <h1 class="card-title adm-text-primary text-6xl text-center font-black mt-8 mb-4"><%= @post.title %></h1>
-        <p class="adm-text-quaternary text-2xl mb-6"><%= @post.category %></p>
+        <p class="text-2xl mb-6 badge badge-lg badge-outline"><%= @post.category %></p>
         <%= simple_format @post.content, class: "adm-text-tertiary text-2xl" %>
         <% if @post.document %>
           <%=link_to "Télécharger", inscription_path(post_id: @post.id), class: "btn btn-outline text-white mt-6" %>
