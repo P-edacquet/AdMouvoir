@@ -1,7 +1,12 @@
 <div id="experiences" class="px-4 lg:px-12 pb-10 lg:pb-24">
   <h1 class="text-6xl text-center py-16">
-    Actualités
+    Ressources et Actualités
   </h1>
+  <% if @category %>
+    <h2 class="!text-3xl text-">
+      Thème : <%= @category %>
+    </h2>
+  <% end %>
   <div class="flex flex-wrap gap-4 justify-center px-4">
     <%= render partial: "post_card", collection: @posts, as: :post %>
   </div>

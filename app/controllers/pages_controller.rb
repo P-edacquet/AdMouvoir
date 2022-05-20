@@ -6,6 +6,10 @@ class PagesController < ApplicationController
   end
   def posts
     @posts = Post.all
+    unless params[:category].blank?
+      @category = params[:category]
+      @posts = @posts.where(category: @category)
+    end
   end
   def about
   end
