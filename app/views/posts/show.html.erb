@@ -7,7 +7,7 @@
     <div class="card card-compact md:card-normal adm-bg-tertiary shadow-xl glass mt-12">
       <div class="card-body">
         <%= link_to actualites_path(category: @post.category) do %>
-          <p class="text-2xl badge badge-lg badge-outline mt-4"><%= @post.category %></p>
+          <p class="text-2xl badge badge-lg badge-outline p-4 my-4"><%= @post.category %></p>
         <% end %>
         <h1 class="card-title adm-text-primary text-2xl lg:text-5xl font-black break-word !mb-8"><%= @post.title %></h1>
         <%= simple_format @post.content, class: "adm-text-tertiary text-2xl break-word" %>

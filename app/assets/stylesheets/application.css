@@ -79,6 +79,6 @@ footer p, footer a{
   transition: 1s;
 }
 #reference-img:hover{
-  transform: scale(2);
+  transform: scale(1.5);
   filter: drop-shadow(0px 0px 3px white);
 }

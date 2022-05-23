@@ -47,7 +47,7 @@
   }
 
   .collapse{
-    @apply !border !border-slate-300 !bg-gradient-to-l !from-bg-primary !to-bg-secondary !text-white !my-2
+    @apply !border !border-slate-300 !bg-gradient-to-l !from-bg-primary !to-bg-secondary !text-white rounded !my-2
   }
 
   #a_propos, #calendar, #conferences, #contact, #experiences, #references, #ressources{
