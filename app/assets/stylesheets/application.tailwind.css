@@ -19,7 +19,7 @@
   }
 
   h2{
-    @apply !text-5xl lg:!text-6xl !font-bold text-center !mb-24
+    @apply !text-5xl lg:!text-6xl !font-bold text-center !mb-20 lg:!mb-24
   }
 
   h3{
@@ -51,7 +51,11 @@
   }
 
   #a_propos, #calendar, #conferences, #contact, #experiences, #references, #ressources{
-    @apply py-12 lg:py-24
+    @apply py-20 lg:py-24
+  }
+
+  #contact-info p{
+   @apply text-2xl text-center
   }
 
 }
