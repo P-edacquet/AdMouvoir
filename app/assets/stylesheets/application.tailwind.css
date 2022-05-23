@@ -19,7 +19,7 @@
   }
 
   h2{
-    @apply !text-5xl lg:!text-6xl !font-bold text-center !mb-12
+    @apply !text-5xl lg:!text-6xl !font-bold text-center !mb-24
   }
 
   h3{
@@ -48,6 +48,10 @@
 
   .collapse{
     @apply !border !border-slate-300 !bg-gradient-to-l !from-bg-primary !to-bg-secondary !text-white !my-2
+  }
+
+  #about, #calendar, #conferences, #contact, #experiences, #references, #ressources{
+    @apply py-12 lg:py-24
   }
 
 }
