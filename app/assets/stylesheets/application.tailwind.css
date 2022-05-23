@@ -50,7 +50,7 @@
     @apply !border !border-slate-300 !bg-gradient-to-l !from-bg-primary !to-bg-secondary !text-white !my-2
   }
 
-  #about, #calendar, #conferences, #contact, #experiences, #references, #ressources{
+  #a_propos, #calendar, #conferences, #contact, #experiences, #references, #ressources{
     @apply py-12 lg:py-24
   }
 

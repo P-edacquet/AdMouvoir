@@ -1,9 +1,9 @@
 <div class="card card-compact md:card-normal w-96 adm-bg-tertiary glass">
   <div class="card-body">
-    <h2 class="adm-text-primary !text-3xl font-black !mb-0 text-left break-word"><%= post.title %></h2>
     <%= link_to actualites_path(category: post.category) do %>
-      <p class="text-xl badge badge-lg badge-outline"><%= post.category %></p>
+      <p class="text-xl badge badge-outline p-4 mb-4"><%= post.category %></p>
     <% end %>
+    <h2 class="!text-2xl font-black !mb-0 text-left break-word adm-text-primary"><%= post.title %></h2>
     <%= simple_format post.content.truncate(200), class: "text-xl break-word" %>
     <div class="card-actions justify-end">
       <%= link_to "Lire la suite", post, class: "btn btn-sm btn-outline text-white mt-4" %>

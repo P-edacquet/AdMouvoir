@@ -6,8 +6,10 @@
 
     <div class="card card-compact md:card-normal adm-bg-tertiary shadow-xl glass mt-12">
       <div class="card-body">
-        <h1 class="card-title adm-text-primary text-3xl lg:text-6xl text-center font-black break-word mt-8 mb-4"><%= @post.title %></h1>
-        <p class="text-2xl mb-6 badge badge-lg badge-outline"><%= @post.category %></p>
+        <%= link_to actualites_path(category: @post.category) do %>
+          <p class="text-2xl badge badge-lg badge-outline mt-4"><%= @post.category %></p>
+        <% end %>
+        <h1 class="card-title adm-text-primary text-2xl lg:text-5xl font-black break-word !mb-8"><%= @post.title %></h1>
         <%= simple_format @post.content, class: "adm-text-tertiary text-2xl break-word" %>
         <% if @post.document %>
           <%=link_to "Télécharger", inscription_path(post_id: @post.id), class: "btn btn-outline text-white mt-6" %>
