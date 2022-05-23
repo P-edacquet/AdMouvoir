@@ -1,4 +1,4 @@
-<div id="a_propos" class="lg:px-32">
+<div id="a_propos" class="flex flex-col lg:px-32">
   <h2>Qui sommes-nous ?</h2>
   <div class="hero-content flex-col lg:flex-row items-start lg:pl-0">
     <div class="lg:mr-8">
@@ -17,12 +17,14 @@
         <br><br>
         Son approche s’inscrit dans un cadre de référence <strong class="adm-text-primary">systémique</strong> (MBA de management général à HEC Paris), <strong class="adm-text-primary">humaniste</strong> (Master RH à IGS Paris) et <strong class="adm-text-primary">relationnel</strong> (Master of business coaching à International Mozaik).
         <br><br>
-        Avant d’entreprendre à son compte, elle a été dirigeante salariée du cabinet conseil RH de la CCI de Paris Ile-de -France et a piloté les Relations humaines et sociales d’organisations publiques (CCI Paris, Centres d’observation et de recherche économique, ESCP, campus LÉA-CFI notamment).
       </p>
-      <% if current_page?(root_path) %>
-        <%= link_to "En savoir plus", about_path, class: "btn btn-outline btn-block mt-6 text-white"%>
-      <% end %>
     </div>
     <%= image_tag "plane.jpg", class: "max-w-full lg:max-w-sm rounded", loading: "lazy" %>
   </div>
+  <p class="text-xl">
+    Avant d’entreprendre à son compte, elle a été dirigeante salariée du cabinet conseil RH de la CCI de Paris Ile-de -France et a piloté les Relations humaines et sociales d’organisations publiques (CCI Paris, Centres d’observation et de recherche économique, ESCP, campus LÉA-CFI notamment).
+  </p>
+  <% if current_page?(root_path) %>
+    <%= link_to "En savoir plus", about_path, class: "btn btn-outline btn-lg text-white mt-12"%>
+  <% end %>
 </div>
