@@ -73,3 +73,12 @@ h1, h2, h3, h4, h5, h6, p, b, strong, a, li{
 footer p, footer a{
   color: white;
 }
+
+#reference-img{
+  filter: drop-shadow(0px 0px 33px white);
+  transition: 1s;
+}
+#reference-img:hover{
+  transform: scale(2);
+  filter: drop-shadow(0px 0px 3px white);
+}
